@@ -11,21 +11,31 @@ export default function Home() {
   const [speed, setSpeed] = useState(1);
   const [currentNote, setCurrentNote] = useState(null);
 
-  // Fonction pour générer un nombre aléatoire entre 1 et 7 (inclus)
   const generateRandomNote = () => {
-    return Math.floor(Math.random() * 7) + 1;
+    return Math.floor(Math.random() * 100) + 1;
   };
 
   useEffect(() => {
-    let intervalId;
+    let requestId;
+    let lastUpdateTime = Date.now();
+
+    const animate = () => {
+      const now = Date.now();
+      const deltaTime = now - lastUpdateTime;
+
+      if (deltaTime >= speed * 1000 || deltaTime < 0) {
+        setCurrentNote(generateRandomNote());
+        lastUpdateTime = now;
+      }
+
+      requestId = requestAnimationFrame(animate);
+    };
 
     if (isPlaying && speed > 0) {
-      intervalId = setInterval(() => {
-        setCurrentNote(generateRandomNote());
-      }, speed * 1000);
+      requestId = requestAnimationFrame(animate);
     }
 
-    return () => clearInterval(intervalId);
+    return () => cancelAnimationFrame(requestId);
   }, [speed, isPlaying]);
 
   const togglePlaying = () => {
