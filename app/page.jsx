@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import ControlPanel from "@/src/ControlPanel";
 import NoteDisplay from "@/src/NoteDisplay";
 import Timer from "@/src/Timer";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);

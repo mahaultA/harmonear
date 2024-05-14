@@ -23,7 +23,7 @@ export default function ControlPanel({
       />
       <button
         onClick={togglePlaying}
-        className="inline-block bg-blue-500 text-white px-2 py-2 rounded-full"
+        className="inline-block bg-blue-500 text-white px-2 py-2 rounded"
       >
         {isPlaying ? "Stop" : "Start"}
       </button>

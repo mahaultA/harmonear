@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { PauseIcon, PlayIcon, RotateCcw } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
 const Timer = () => {
@@ -48,18 +51,16 @@ const Timer = () => {
         {milliseconds.toString().padStart(3, "0")}
       </p>
       <div className="flex gap-1">
-        <button
-          className="w-20 bg-blue-500 text-white px-2 py-2 rounded-full"
+        <Button
+          className={cn("rounded-full")}
+          size="icon"
           onClick={startAndStop}
         >
-          {isRunning ? "Stop" : "Start"}
-        </button>
-        <button
-          className="w-20 bg-blue-500 text-white px-2 py-2 rounded-full"
-          onClick={reset}
-        >
-          Reset
-        </button>
+          {isRunning ? <PauseIcon /> : <PlayIcon />}
+        </Button>
+        <Button className={cn("rounded-full")} size="icon" onClick={reset}>
+          <RotateCcw />
+        </Button>
       </div>
     </div>
   );
