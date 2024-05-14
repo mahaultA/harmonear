@@ -49,13 +49,13 @@ const Timer = () => {
       </p>
       <div className="flex gap-1">
         <button
-          className="w-20 bg-blue-500 text-white px-2 py-2 rounded"
+          className="w-20 bg-blue-500 text-white px-2 py-2 rounded-full"
           onClick={startAndStop}
         >
           {isRunning ? "Stop" : "Start"}
         </button>
         <button
-          className="w-20 bg-blue-500 text-white px-2 py-2 rounded"
+          className="w-20 bg-blue-500 text-white px-2 py-2 rounded-full"
           onClick={reset}
         >
           Reset
