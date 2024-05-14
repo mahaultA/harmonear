@@ -1,14 +1,33 @@
 "use client";
-
+import { useEffect, useState } from "react";
 import ControlPanel from "@/src/ControlPanel";
-import { Header } from "@/src/Header";
 import NoteDisplay from "@/src/NoteDisplay";
-import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
+  const [currentNote, setCurrentNote] = useState(null);
+
+  // Fonction pour générer un nombre aléatoire entre 1 et 7 (inclus)
+  const generateRandomNote = () => {
+    return Math.floor(Math.random() * 7) + 1;
+  };
+
+  useEffect(() => {
+    let intervalId;
+
+    if (isPlaying) {
+      intervalId = setInterval(() => {
+        setCurrentNote(generateRandomNote());
+      }, speed * 1000);
+    }
+
+    return () => clearInterval(intervalId);
+  }, [speed, isPlaying]);
+
+  const togglePlaying = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
@@ -17,9 +36,9 @@ export default function Home() {
         speed={speed}
         setSpeed={setSpeed}
         isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
+        togglePlaying={togglePlaying}
       />
-      <NoteDisplay speed={speed} isPlaying={isPlaying} />
+      <NoteDisplay currentNote={currentNote} />
     </main>
   );
 }
