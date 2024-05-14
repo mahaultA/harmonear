@@ -14,16 +14,16 @@ export default function ControlPanel({
   };
 
   return (
-    <div className="my-4">
+    <div className="flex my-4 flex-col gap-1">
       <input
         type="number"
         value={speed}
         onChange={handleSpeedChange}
-        className="mr-2 p-2 border border-gray-300"
+        className="p-2 border border-gray-300 rounded"
       />
       <button
         onClick={togglePlaying}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="inline-block bg-blue-500 text-white px-2 py-2 rounded"
       >
         {isPlaying ? "Stop" : "Start"}
       </button>

@@ -2,8 +2,9 @@ import React from "react";
 
 export default function NoteDisplay({ currentNote }) {
   return (
-    <div className="my-4">
-      <h2>Current Note: {currentNote}</h2>
+    <div className="flex my-4 flex-col text-center">
+      <span className="text-xl">Degree</span>
+      <span className="text-xl">{currentNote}</span>
     </div>
   );
 }

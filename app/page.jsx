@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import ControlPanel from "@/src/ControlPanel";
 import NoteDisplay from "@/src/NoteDisplay";
+import Timer from "@/src/Timer";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -16,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     let intervalId;
 
-    if (isPlaying) {
+    if (isPlaying && speed > 0) {
       intervalId = setInterval(() => {
         setCurrentNote(generateRandomNote());
       }, speed * 1000);
@@ -39,6 +40,7 @@ export default function Home() {
         togglePlaying={togglePlaying}
       />
       <NoteDisplay currentNote={currentNote} />
+      <Timer />
     </main>
   );
 }
