@@ -36,15 +36,18 @@ const AudioPlayer = () => {
   };
 
   return (
-    <div className="flex gap-1">
-      <Button onClick={() => playNote("G3")}>G3</Button>
-      <Button onClick={() => playNote("A3")}>A3</Button>
-      <Button onClick={() => playNote("B3")}>B3</Button>
-      <Button onClick={() => playNote("C4")}>C4</Button>
-      <Button onClick={() => playNote("D4")}>D4</Button>
-      <Button onClick={() => playNote("E4")}>E4</Button>
-      <Button onClick={() => playNote("F#4")}>F#4</Button>
-      <Button onClick={() => playNote("G4")}>G4</Button>
+    <div className="my-8">
+      <p className="font-bold my-2 text-center">Major Scale Reminder 🎶</p>
+      <div className="flex gap-1">
+        <Button onClick={() => playNote("G3")}>G3</Button>
+        <Button onClick={() => playNote("A3")}>A3</Button>
+        <Button onClick={() => playNote("B3")}>B3</Button>
+        <Button onClick={() => playNote("C4")}>C4</Button>
+        <Button onClick={() => playNote("D4")}>D4</Button>
+        <Button onClick={() => playNote("E4")}>E4</Button>
+        <Button onClick={() => playNote("F#4")}>F#4</Button>
+        <Button onClick={() => playNote("G4")}>G4</Button>
+      </div>
     </div>
   );
 };

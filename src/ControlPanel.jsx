@@ -15,7 +15,11 @@ export default function ControlPanel({
 
   return (
     <div className="flex my-4 flex-col gap-1">
+      <label htmlFor="scrollSpeed" className="text-gray-600 text-sm">
+        Set the scrolling speed (in seconds)
+      </label>
       <input
+        id="scrollSpeed"
         type="number"
         value={speed}
         onChange={handleSpeedChange}
