@@ -3,7 +3,49 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { PauseIcon, PlayIcon, RotateCcw } from "lucide-react";
 
-const REFRESH_FREQ = 50;
+const REFRESH_FREQ = 10; // Rafraîchir toutes les 10 millisecondes
+
+const useTimer = () => {
+  const watchDogRef = useRef(null);
+  const [startTime, setStartTime] = useState(0);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  const startTimer = () => {
+    setStartTime(Date.now() - elapsedTime);
+    setIsRunning(true);
+  };
+
+  const stopTimer = () => {
+    setIsRunning(false);
+  };
+
+  const resetTimer = () => {
+    setElapsedTime(0);
+  };
+
+  useEffect(() => {
+    if (isRunning) {
+      watchDogRef.current = setInterval(() => {
+        const now = Date.now();
+        const elapsed = now - startTime;
+        setElapsedTime(elapsed);
+      }, REFRESH_FREQ);
+    } else {
+      clearInterval(watchDogRef.current);
+    }
+
+    return () => clearInterval(watchDogRef.current);
+  }, [isRunning, startTime]);
+
+  return {
+    elapsedTime,
+    isRunning,
+    startTimer,
+    stopTimer,
+    resetTimer,
+  };
+};
 
 const formatTime = (time) => {
   const hours = Math.floor(time / 3600000);
@@ -17,100 +59,32 @@ const formatTime = (time) => {
     .padStart(3, "0")}`;
 };
 
-const useTimer = () => {
-  const watchDogRef = useRef(0);
-  const [paused, setPaused] = useState(false);
-  const [timer, setTimer] = useState({
-    timerValue: 0,
-    lastTime: Date.now(),
-  });
-
-  const refreshTimer = () => {
-    const now = Date.now();
-    setTimer((ps) => ({
-      timerValue: ps.timerValue + (now - ps.lastTime),
-      lastTime: now,
-    }));
-  };
-
-  const resetTimer = () => {
-    setTimer(() => ({
-      timerValue: 0,
-      lastTime: Date.now(),
-    }));
-  };
-
-  useEffect(() => {
-    // Starting timer for the first time.
-    if (!watchDogRef.current && !paused) {
-      watchDogRef.current = setInterval(refreshTimer, REFRESH_FREQ);
-    }
-
-    /***************** Important Note *****************
-     * The following is commented since the returned function from the effect is implemented
-     * when the strict mode is enabled in development.
-     * You can keep it commented or use (npm run build && serve -s build) command
-     * in order for the code to run as expected on production environment.
-     *
-     * To install serve use the command (npm install -g serve).
-     *****************/
-
-    // Clearing the watchDogRef interval upon unmount if it is already set.
-    // return () => {
-    //     if (watchDogRef.current)
-    //         clearInterval(watchDogRef.current);
-    // }
-
-    //eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    // paused turned true, so we clear the interval.
-    if (paused) {
-      // Clearing the interval.
-      clearInterval(watchDogRef.current);
-      // Clearing the reference to the interval.
-      watchDogRef.current = 0;
-      // Updating the timer with remaining of the second when the value is set to pause as the timer will not be updated.
-      refreshTimer();
-    }
-
-    // paused turned false, so we resume the timer
-    else if (!watchDogRef.current) {
-      // Setting last time to now() since we need to calculate the time from the moment timer was resumed.
-      setTimer((ps) => ({ ...ps, lastTime: Date.now() }));
-      // Creating creating the watchdog interval.
-      watchDogRef.current = setInterval(refreshTimer, REFRESH_FREQ);
-    }
-  }, [paused]);
-
-  return {
-    timerValue: timer.timerValue,
-    paused,
-    setPaused,
-    resetTimer,
-  };
-};
-
 const Timer = () => {
-  const { timerValue, paused, setPaused, resetTimer } = useTimer();
+  const { elapsedTime, isRunning, startTimer, stopTimer, resetTimer } =
+    useTimer();
 
-  const togglePaused = () => setPaused(!paused);
+  const toggleTimer = () => {
+    if (isRunning) {
+      stopTimer();
+    } else {
+      startTimer();
+    }
+  };
 
   return (
     <div className="flex mx-auto items-center text-center my-4 flex-col gap-1">
       <h2 className="font-bold">Track your practice time</h2>
       <span className="text-sm">Timer</span>
       <p className="flex mx-auto items-center text-center font-sans">
-        {formatTime(timerValue)}
+        {formatTime(elapsedTime)}
       </p>
       <div className="flex gap-1">
         <Button
           className={cn("rounded-full")}
           size="icon"
-          onClick={togglePaused}
+          onClick={toggleTimer}
         >
-          {paused ? <PlayIcon /> : <PauseIcon />}
+          {isRunning ? <PauseIcon /> : <PlayIcon />}
         </Button>
         <Button className={cn("rounded-full")} size="icon" onClick={resetTimer}>
           <RotateCcw />
