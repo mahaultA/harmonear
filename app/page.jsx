@@ -6,6 +6,8 @@ import Timer from "@/src/Timer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// BUG TO FIX : Affichage de la nouvelle note qui est identique à celle en cours donc pn ne comprend pas que ça en est une nouvelle
+
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
@@ -24,7 +26,11 @@ export default function Home() {
       const deltaTime = now - lastUpdateTime;
 
       if (deltaTime >= speed * 1000 || deltaTime < 0) {
-        setCurrentNote(generateRandomNote());
+        let newNote = generateRandomNote();
+        while (newNote === currentNote) {
+          newNote = generateRandomNote();
+        }
+        setCurrentNote((currNote) => newNote);
         lastUpdateTime = now;
       }
 
@@ -36,7 +42,7 @@ export default function Home() {
     }
 
     return () => cancelAnimationFrame(requestId);
-  }, [speed, isPlaying]);
+  }, [speed, isPlaying, currentNote]);
 
   const togglePlaying = () => {
     setIsPlaying(!isPlaying);
