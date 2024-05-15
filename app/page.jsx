@@ -7,10 +7,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 // BUG TO FIX : Affichage de la nouvelle note qui est identique à celle en cours donc pn ne comprend pas que ça en est une nouvelle
-
-export default function Home() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [speed, setSpeed] = useState(1);
+const useRandomNote = (isPlaying, speed) => {
   const [currentNote, setCurrentNote] = useState(null);
 
   const generateRandomNote = () => {
@@ -30,7 +27,7 @@ export default function Home() {
         while (newNote === currentNote) {
           newNote = generateRandomNote();
         }
-        setCurrentNote((currNote) => newNote);
+        setCurrentNote((note) => newNote);
         lastUpdateTime = now;
       }
 
@@ -43,6 +40,15 @@ export default function Home() {
 
     return () => cancelAnimationFrame(requestId);
   }, [speed, isPlaying, currentNote]);
+
+  return currentNote;
+};
+
+export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [speed, setSpeed] = useState(1);
+
+  const currentNote = useRandomNote(isPlaying, speed);
 
   const togglePlaying = () => {
     setIsPlaying(!isPlaying);
