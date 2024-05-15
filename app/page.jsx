@@ -5,6 +5,7 @@ import NoteDisplay from "@/src/NoteDisplay";
 import Timer from "@/src/Timer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import AudioPlayer from "@/src/AudioPlayer";
 
 const useRandomNoteScrolling = (isPlaying, speed) => {
   const requestIdRef = useRef(null);
@@ -63,6 +64,7 @@ export default function Home() {
         togglePlaying={togglePlaying}
       />
       <NoteDisplay currentNote={currentNote} />
+      <AudioPlayer />
       <Timer />
     </main>
   );

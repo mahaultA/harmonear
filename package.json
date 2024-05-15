@@ -24,5 +24,19 @@
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
+  },
+  "prettier": {
+    "quotes": "preserve"
+  },
+  "eslintConfig": {
+    "rules": {
+      "quotes": [
+        "error",
+        "double",
+        {
+          "avoidEscape": true
+        }
+      ]
+    }
   }
 }
