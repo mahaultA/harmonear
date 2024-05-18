@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { noteFrequencies } from "./noteFrequencies";
 
-const AudioPlayer = () => {
+const NotePlayer = () => {
   const [audioContext, setAudioContext] = useState(null);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const AudioPlayer = () => {
   );
 };
 
-export default AudioPlayer;
+export default NotePlayer;
