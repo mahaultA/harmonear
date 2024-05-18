@@ -4,11 +4,11 @@ import YouTube from "react-youtube";
 // F Drone chord :  https://youtu.be/IST7dd6yMOw
 // G Drone chord : https://youtu.be/OfFP5T0yvvk
 // A Drone chord :  : https://youtu.be/12HjkV1Llyc
-// Bb Drone chord : https://youtu.be/pRg93KUVBII
+// A# Drone chord : https://youtu.be/pRg93KUVBII
 
 const YoutubePlayer = () => {
   // ID de la vidéo YouTube que vous souhaitez lire
-  const videoId = "IST7dd6yMOw";
+  const videoId = "OfFP5T0yvvk";
 
   // Options pour le lecteur YouTube
   const opts = {
