@@ -60,15 +60,17 @@ const ScalePlayer = ({ startNote }) => {
       <p className="my-2 text-center">Starting note: {startNote}</p>
       <div className="flex flex-wrap justify-center gap-1">
         {majorScaleNotes.map((note, index) => (
-          <Button
-            key={index}
-            onClick={() => playNote(note)}
-            className="flex flex-col rounded-full gap-0"
-            size="icon"
-          >
-            <span className="text-lg">{index + 1}</span>
-            {/* <span className="text-xs opacity-30">{note}</span> */}
-          </Button>
+          <div key={index}>
+            <Button
+              key={index}
+              onClick={() => playNote(note)}
+              className="flex flex-col rounded-full gap-0"
+              size="icon"
+            >
+              <span className="text-lg">{index + 1}</span>
+            </Button>
+            <span className="text-xs opacity-50">{note}</span>
+          </div>
         ))}
       </div>
     </div>
