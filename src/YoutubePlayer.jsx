@@ -8,7 +8,7 @@ import YouTube from "react-youtube";
 
 const YoutubePlayer = () => {
   // ID de la vidéo YouTube que vous souhaitez lire
-  const videoId = "OfFP5T0yvvk";
+  const videoId = "IST7dd6yMOw";
 
   // Options pour le lecteur YouTube
   const opts = {

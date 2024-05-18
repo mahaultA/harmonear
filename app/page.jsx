@@ -5,7 +5,7 @@ import NoteDisplay from "@/src/NoteDisplay";
 import Timer from "@/src/Timer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import NotePlayer from "@/src/NotePlayer";
+import ScalePlayer from "@/src/ScalePlayer";
 import YoutubePlayer from "@/src/YoutubePlayer";
 
 const useRandomNoteScrolling = (isPlaying, speed) => {
@@ -65,7 +65,7 @@ export default function Home() {
         togglePlaying={togglePlaying}
       />
       <NoteDisplay currentNote={currentNote} />
-      <NotePlayer />
+      <ScalePlayer startNote="G3" />
       <YoutubePlayer />
       <Timer />
     </main>
