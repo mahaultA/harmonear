@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ScalePlayer from "@/src/ScalePlayer";
 import YoutubePlayer from "@/src/YoutubePlayer";
+import DroneChordsPlayer from "@/src/DroneChordPlayer";
+import ScalePracticer from "@/src/ScalePracticer";
 
 const useRandomNoteScrolling = (isPlaying, speed) => {
   const requestIdRef = useRef(null);
@@ -28,7 +30,6 @@ const useRandomNoteScrolling = (isPlaying, speed) => {
           newNote = generateRandomNote();
         }
         setCurrentNote(() => newNote);
-        // setCurrentNote((note) => note + 1);
         lastUpdateTimeRef.current = now;
       }
 
@@ -65,8 +66,7 @@ export default function Home() {
         togglePlaying={togglePlaying}
       />
       <NoteDisplay currentNote={currentNote} />
-      <ScalePlayer startNote="G3" />
-      <YoutubePlayer />
+      <ScalePracticer />
       <Timer />
     </main>
   );

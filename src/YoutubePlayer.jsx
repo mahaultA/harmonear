@@ -6,9 +6,9 @@ import YouTube from "react-youtube";
 // A Drone chord :  : https://youtu.be/12HjkV1Llyc
 // A# Drone chord : https://youtu.be/pRg93KUVBII
 
-const YoutubePlayer = () => {
+const YoutubePlayer = ({ videoId }) => {
   // ID de la vidéo YouTube que vous souhaitez lire
-  const videoId = "OfFP5T0yvvk";
+  // const videoId = "OfFP5T0yvvk";
 
   // Options pour le lecteur YouTube
   const opts = {
