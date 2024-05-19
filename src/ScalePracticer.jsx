@@ -10,9 +10,13 @@ const ScalePracticer = () => {
   };
 
   return (
-    <div className="mx-auto max-w-md">
+    <div className="mx-auto">
+      <h1 className="mb-4 text-center font-bold">Major Scale Practicer</h1>
       <div className="mb-4 text-center">
-        <label htmlFor="tonalCenterSelect" className="block font-bold mb-1">
+        <label
+          htmlFor="tonalCenterSelect"
+          className="block font-bold mb-1 text-sm"
+        >
           Choose your tonal center:
         </label>
         <select

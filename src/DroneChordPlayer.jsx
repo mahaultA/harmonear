@@ -19,13 +19,16 @@ const DroneChordsPlayer = ({ note }) => {
 
   // Retourner le composant YoutubePlayer avec videoId dans les props ou le message d'erreur
   return (
-    <div>
-      {videoId ? (
-        <YoutubePlayer videoId={videoId} />
-      ) : (
-        <div>Error: Video not found</div>
-      )}
-    </div>
+    <>
+      <p className="font-bold text-center text-sm">Background Drone Chord</p>
+      <div className="mx-auto flex justify-center">
+        {videoId ? (
+          <YoutubePlayer videoId={videoId} />
+        ) : (
+          <div>Error: Video not found</div>
+        )}
+      </div>
+    </>
   );
 };
 

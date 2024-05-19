@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function NoteDisplay({ currentNote }) {
   return (
     <div className="flex my-4 flex-col text-center">

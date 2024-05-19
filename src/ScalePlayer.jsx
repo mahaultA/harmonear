@@ -56,8 +56,8 @@ const ScalePlayer = ({ startNote }) => {
 
   return (
     <div className="my-8 text-center">
-      <p className="font-bold my-2 text-center">Major Scale Reminder 🎶</p>
-      <p className="my-2 text-center">Starting note: {startNote}</p>
+      <p className="font-bold text-center text-sm">Major Scale Reminder 🎶</p>
+      <p className="my-1 text-center text-sm">Starting note: {startNote}</p>
       <div className="flex flex-wrap justify-center gap-1">
         {majorScaleNotes.map((note, index) => (
           <div key={index}>
