@@ -10,7 +10,7 @@ const ScalePracticer = () => {
   };
 
   return (
-    <div className="mx-auto mx-20">
+    <div className="mx-auto mx-20 px-4">
       <h1 className="mx-auto md:mx-16 mb-5 text-center font-bold">
         Major Scale Practicer
       </h1>
