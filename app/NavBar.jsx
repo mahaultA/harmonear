@@ -9,28 +9,40 @@ const Navbar = ({ children }) => {
   return (
     <>
       <nav className="flex flex-row justify-around max-w-5xl mx-auto px-4 py-3 sm:px-6">
-        <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
+        <Link
+          className={`link ${
+            pathname === "/" ? "active font-bold" : ""
+          } hover:opacity-80`}
+          href="/"
+        >
           Home
         </Link>
         <Link
-          className={`link ${pathname === "/practicer" ? "active" : ""}`}
+          className={`link ${
+            pathname === "/practicer" ? "active font-bold" : ""
+          } hover:opacity-80`}
           href="/practicer"
         >
           Practicer
         </Link>
         <Link
-          className={`link ${pathname === "/challenge" ? "active" : ""}`}
+          className={`link ${
+            pathname === "/challenge" ? "active font-bold" : ""
+          } hover:opacity-80`}
           href="/challenge"
         >
           Challenge
         </Link>
         <Link
-          className={`link ${pathname === "/about" ? "active" : ""}`}
+          className={`link ${
+            pathname === "/about" ? "active font-bold" : ""
+          } hover:opacity-80`}
           href="/about"
         >
           About
         </Link>
       </nav>
+
       {children}
     </>
   );
