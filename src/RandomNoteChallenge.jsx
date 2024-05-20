@@ -14,7 +14,7 @@ const RandomNoteChallenge = () => {
   };
 
   return (
-    <div>
+    <div className="px-4">
       <p className="mx-auto md:mx-36 mx-10 mb-5 text-center font-bold">
         Now it&apos;s time to challenge your sight singing!
       </p>

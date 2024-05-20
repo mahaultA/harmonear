@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div className="px-4">
       <p className="mx-auto md:mx-36 mx-10 mt-10 text-center">
         My name is <span className="font-bold">Mahault</span> !
       </p>
