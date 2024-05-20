@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 export default function ControlPanel({
@@ -14,23 +15,27 @@ export default function ControlPanel({
   };
 
   return (
-    <div className="flex my-4 flex-col gap-1">
-      <label htmlFor="scrollSpeed" className="text-gray-600 text-sm">
-        Set the scrolling speed (in seconds)
+    <div className="mx-auto my-4 gap-1 text-center">
+      <label htmlFor="scrollSpeed" className="block text-gray-600 text-sm">
+        Set the scrolling speed (in seconds):
       </label>
-      <input
-        id="scrollSpeed"
-        type="number"
-        value={speed}
-        onChange={handleSpeedChange}
-        className="p-2 border border-gray-300 rounded"
-      />
-      <button
-        onClick={togglePlaying}
-        className="inline-block bg-blue-500 text-white px-2 py-2 rounded"
-      >
-        {isPlaying ? "Stop" : "Start"}
-      </button>
+      <div className="inline-block">
+        <input
+          id="scrollSpeed"
+          type="number"
+          value={speed}
+          onChange={handleSpeedChange}
+          className="p-2 border border-gray-300 rounded w-40 text-center"
+        />
+      </div>
+      <div className="mt-2">
+        <Button
+          onClick={togglePlaying}
+          className="block text-white px-8 py-2 rounded mx-auto"
+        >
+          {isPlaying ? "Stop" : "Start"}
+        </Button>
+      </div>
     </div>
   );
 }
