@@ -1,7 +1,8 @@
 "use client";
-
+// NavBar.jsx
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { TimerProvider } from "./TimerContext";
 
 const Navbar = ({ children }) => {
   const pathname = usePathname();
@@ -30,7 +31,13 @@ const Navbar = ({ children }) => {
         >
           About
         </Link>
-        {/* <Link href="/about">About</Link> */}
+
+        <Link
+          className={`link ${pathname === "/stopwatch" ? "active" : ""}`}
+          href="/stopwatch"
+        >
+          ⏱️
+        </Link>
       </nav>
       {children}
     </>
