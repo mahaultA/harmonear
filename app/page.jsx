@@ -4,7 +4,6 @@ import TimerDialog from "@/src/TimerDialog";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import profilePic from "../assets/icon-ear.svg";
 
 const Card = ({ title, description, imageUrl, link }) => (
   <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-1">
@@ -53,12 +52,10 @@ export default function Home() {
         imageUrl="https://cdn.pixabay.com/photo/2022/01/14/22/56/valentines-day-6938299_960_720.jpg"
         link="/practicer"
       />
-      <Image
-        src={profilePic}
-        alt="Picture of the author"
-        width={500}
-        height={500}
-      />
+      <p className="mt-10 items-center text-center">
+        You can use the provided stopwatch to track your training time. <br />
+        You can access it via the button :
+      </p>
       <TimerDialog />
     </main>
   );
