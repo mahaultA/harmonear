@@ -16,11 +16,12 @@ const RandomNoteChallenge = () => {
   return (
     <div>
       <p className="mx-auto md:mx-36 mx-10 mb-5 text-center font-bold">
-        Now it's time to challenge your sight singing!
+        Now it&apos;s time to challenge your sight singing!
       </p>
       <p className="mx-auto md:mx-36 mx-10 mb-10 text-center">
-        Set the speed at which you want the notes (also called "degrees") to be
-        displayed, and try to sing them as quickly as they appear!
+        Set the speed at which you want the notes (also called
+        &quot;degrees&quot;) to be displayed, and try to sing them as quickly as
+        they appear!
       </p>
       <ControlPanel
         speed={speed}
