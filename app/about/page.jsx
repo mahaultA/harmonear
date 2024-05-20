@@ -1,11 +1,11 @@
 export default function About() {
   return (
     <div>
-      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+      <p className="mx-auto md:mx-36 mx-10 mt-10 text-center">
         My name is <span className="font-bold">Mahault</span> !
       </p>
       <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
-        I've been trying to recognize musical notes by ear using using popular
+        I have been trying to recognize musical notes by ear using popular
         methods of interval recognition and numerous ear training apps.
         <br />
         Despite my discipline to practice every day, I did not notice any
@@ -13,10 +13,10 @@ export default function About() {
       </p>
       <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
         Then I bought a course that uses the concept of{" "}
-        <span className="font-bold">"tonal center"</span> to practice ear
-        training ...
+        <span className="font-bold">tonal center</span> to practice ear training
+        ...
       </p>
-      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+      <p className="mx-auto md:mx-36 mx-10 mb-10 mt-10 text-center">
         And <span className="font-bold">WOW</span>!<br />I quickly observed
         progress I was able to recognize the notes and chords used in the songs
         I was listening to 🎉 <br /> I developed these tools to practice this

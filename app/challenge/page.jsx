@@ -1,19 +1,17 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import RandomNoteChallenge from "@/src/RandomNoteChallenge";
 import TimerDialog from "@/src/TimerDialog";
 
 export default function Challenge() {
   return (
-    <div>
-      <div className="flex justify-end px-8">
-        <Button>
+    <div className="mt-10">
+      <RandomNoteChallenge />;
+      <div className="flex justify-center px-8">
+        <span className="py-4">
           <TimerDialog />
-        </Button>
+        </span>
       </div>
-
-      <RandomNoteChallenge />
     </div>
   );
 }

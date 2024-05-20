@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button";
 
 const Practicer = () => {
   return (
-    <div>
-      <div className="flex justify-end px-8">
-        <Button>
-          <TimerDialog />
-        </Button>
-      </div>
+    <div className="mt-10">
       <ScalePracticer />;
+      <div className="flex justify-center px-8">
+        <span className="py-4">
+          <TimerDialog />
+        </span>
+      </div>
     </div>
   );
 };

@@ -12,9 +12,7 @@ export default function Home() {
       <p className="my-4">
         The ear trainer for singers/chorists, and musicians
       </p>
-      <Button>
-        <TimerDialog />
-      </Button>
+      <TimerDialog />
     </main>
   );
 }
