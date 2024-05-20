@@ -1,7 +1,28 @@
 export default function About() {
   return (
     <div>
-      <h1>About</h1>
+      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+        My name is <span className="font-bold">Mahault</span> !
+      </p>
+      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+        I've been trying to recognize musical notes by ear using using popular
+        methods of interval recognition and numerous ear training apps.
+        <br />
+        Despite my discipline to practice every day, I did not notice any
+        significant progress
+      </p>
+      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+        Then I bought a course that uses the concept of{" "}
+        <span className="font-bold">"tonal center"</span> to practice ear
+        training ...
+      </p>
+      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+        And <span className="font-bold">WOW</span>!<br />I quickly observed
+        progress I was able to recognize the notes and chords used in the songs
+        I was listening to 🎉 <br /> I developed these tools to practice this
+        method more comfortably, no need to have or to know how to play an
+        instrument
+      </p>
     </div>
   );
 }

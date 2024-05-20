@@ -3,11 +3,16 @@
 import React from "react";
 import ScalePracticer from "@/src/ScalePracticer";
 import TimerDialog from "@/src/TimerDialog";
+import { Button } from "@/components/ui/button";
 
 const Practicer = () => {
   return (
     <div>
-      <TimerDialog />
+      <div className="flex justify-end px-8">
+        <Button>
+          <TimerDialog />
+        </Button>
+      </div>
       <ScalePracticer />;
     </div>
   );
