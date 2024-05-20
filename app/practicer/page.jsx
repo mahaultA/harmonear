@@ -2,9 +2,15 @@
 
 import React from "react";
 import ScalePracticer from "@/src/ScalePracticer";
+import TimerDialog from "@/src/TimerDialog";
 
 const Practicer = () => {
-  return <ScalePracticer />;
+  return (
+    <div>
+      <TimerDialog />
+      <ScalePracticer />;
+    </div>
+  );
 };
 
 export default Practicer;
