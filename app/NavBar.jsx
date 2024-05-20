@@ -8,7 +8,7 @@ const Navbar = ({ children }) => {
 
   return (
     <>
-      <nav className="flex flex-row justify-between max-w-5xl mx-auto px-4 py-3 sm:px-6">
+      <nav className="flex flex-row justify-around max-w-5xl mx-auto px-4 py-3 sm:px-6">
         <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
           Home
         </Link>
