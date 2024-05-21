@@ -17,7 +17,6 @@ const DroneChordsPlayer = ({ note }) => {
         <div className="mx-auto flex justify-center">
           Error: Background chord unavailable
         </div>
-        ;
       </>
     );
   }
