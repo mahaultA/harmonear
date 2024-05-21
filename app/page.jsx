@@ -50,7 +50,7 @@ export default function Home() {
         title="Sight singing challenge"
         description="See how fast you can sight sing the notes displayed ! You can set the speed to display random notes, also called degrees."
         imageUrl="https://cdn.pixabay.com/photo/2016/03/31/20/28/bird-1295782_960_720.png"
-        link="/practicer"
+        link="/challenge"
       />
       <p className="mt-10 items-center text-center my-4">
         Use the provided stopwatch to track your training time ! <br />
