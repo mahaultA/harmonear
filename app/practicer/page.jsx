@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Practicer = () => {
   return (
-    <div className="mt-10">
+    <div className="my-10">
       <ScalePracticer />;
       <div className="flex justify-center px-8">
         <span className="py-4">

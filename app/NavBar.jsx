@@ -17,7 +17,7 @@ const Navbar = ({ children }) => {
         <Link
           className={`link ${
             pathname === "/" ? "active font-bold" : ""
-          } hover:opacity-80 flex gap-2 items-center`}
+          } hover:opacity-80 flex flex-col items-center`}
           href="/"
         >
           <span>Home</span>
@@ -26,7 +26,7 @@ const Navbar = ({ children }) => {
         <Link
           className={`link ${
             pathname === "/practicer" ? "active font-bold" : ""
-          } hover:opacity-80 flex gap-2 items-center`}
+          } hover:opacity-80 flex flex-col items-center`}
           href="/practicer"
         >
           <span>Practicer</span>
@@ -35,7 +35,7 @@ const Navbar = ({ children }) => {
         <Link
           className={`link ${
             pathname === "/challenge" ? "active font-bold" : ""
-          } hover:opacity-80 flex gap-2 items-center`}
+          } hover:opacity-80 flex flex-col items-center`}
           href="/challenge"
         >
           <span>Challenge</span>
@@ -44,7 +44,7 @@ const Navbar = ({ children }) => {
         <Link
           className={`link ${
             pathname === "/about" ? "active font-bold" : ""
-          } hover:opacity-80 flex gap-2 items-center`}
+          } hover:opacity-80 flex flex-col items-center`}
           href="/about"
         >
           <span>About</span>
