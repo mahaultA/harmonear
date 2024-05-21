@@ -42,14 +42,14 @@ export default function Home() {
       <Card
         title="Ear Practicer"
         description="Practice singing and hearing each tone of the major scale."
-        imageUrl="https://cdn.pixabay.com/photo/2024/04/15/14/33/ai-generated-8697969_960_720.jpg"
+        imageUrl="https://cdn.pixabay.com/photo/2022/08/30/08/04/brain-7420599_1280.png"
         link="/practicer"
       />
       <div className="h-1" /> {/* Espacement de 1 pixel */}
       <Card
-        title="Ear training challenge"
+        title="Sight singing challenge"
         description="See how fast you can sight sing the notes displayed ! You can set the speed to display random notes, also called degrees."
-        imageUrl="https://cdn.pixabay.com/photo/2022/01/14/22/56/valentines-day-6938299_960_720.jpg"
+        imageUrl="https://cdn.pixabay.com/photo/2016/03/31/20/28/bird-1295782_960_720.png"
         link="/practicer"
       />
       <p className="mt-10 items-center text-center">
