@@ -10,7 +10,7 @@ const ScalePracticer = () => {
   };
 
   return (
-    <div className="mx-auto mx-20 px-4">
+    <div className="mx-auto mx-20 px-4 items-center justify-center">
       <h1 className="mx-auto md:mx-16 mb-5 text-center font-bold">
         Major Scale Practicer
       </h1>
@@ -19,7 +19,7 @@ const ScalePracticer = () => {
         choosing the tonal center you want to practice, you can choose to
         practice with or without the background drone chord
       </p>
-      <div className="mb-4 text-center">
+      <div className="mx-auto mb-4 text-center items-center justify-center">
         <label
           htmlFor="tonalCenterSelect"
           className="block font-bold mb-1 text-sm"

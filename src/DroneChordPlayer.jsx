@@ -11,7 +11,15 @@ const DroneChordsPlayer = ({ note }) => {
 
   // Si la note n'est pas présente dans droneChords, retourner un message d'erreur
   if (!droneChordLink) {
-    return <div>Error: Note not supported</div>;
+    return (
+      <>
+        <p className="font-bold text-center text-sm">Background Drone Chord</p>
+        <div className="mx-auto flex justify-center">
+          Error: Background chord unavailable
+        </div>
+        ;
+      </>
+    );
   }
 
   // Parser le lien youtube pour garder la partie après "https://youtu.be/"
