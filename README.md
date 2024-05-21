@@ -4,6 +4,10 @@ Harmonize Me est un projet [Next.js](https://nextjs.org/) créé avec [`create-n
 J'ai créé ces outils pour les chanteurs/choristes et musiciens qui désirent entraîner leur oreille à reconnaître les notes et les accords dans les musiques qu'ils écoutent
 C'est une méthode impopulaire qui n'est pas basée sur les intervalles mais sur le "centre tonal"
 
+## Ma Stack
+
+Javascript, React, NextJs 14, Tailwind, Shadcn UI
+
 ## Cloner le projet
 
 Ouvrir un terminal et executer les commandes suivantes :
@@ -18,7 +22,7 @@ pnpm install
 
 ## Test du projet
 
-Executer la commande suivante pour lancer notre application web (ça ouvre un port sur un serveur web) :
+Executer la commande suivante pour lancer la web app :
 
 ```bash
 npm run dev
