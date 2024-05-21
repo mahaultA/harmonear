@@ -52,8 +52,8 @@ export default function Home() {
         imageUrl="https://cdn.pixabay.com/photo/2016/03/31/20/28/bird-1295782_960_720.png"
         link="/practicer"
       />
-      <p className="mt-10 items-center text-center">
-        You can use the provided stopwatch to track your training time. <br />
+      <p className="mt-10 items-center text-center my-4">
+        Use the provided stopwatch to track your training time ! <br />
         You can access it via the button :
       </p>
       <TimerDialog />

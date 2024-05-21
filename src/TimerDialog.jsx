@@ -12,7 +12,11 @@ import {
 const TimerDialog = () => {
   return (
     <Dialog>
-      <DialogTrigger> Track your practice time &gt;&gt;&gt; ⏱️</DialogTrigger>
+      <DialogTrigger>
+        <Button variant="default" size="default">
+          Track your practice time ⏱️
+        </Button>
+      </DialogTrigger>
       <DialogContent>
         <Timer />
       </DialogContent>

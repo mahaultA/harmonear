@@ -16,12 +16,17 @@ export default function About() {
         <span className="font-bold">tonal center</span>&quot; to practice ear
         training ...
       </p>
-      <p className="mx-auto md:mx-36 mx-10 mb-20 mt-10 text-center">
-        And <span className="font-bold">WOW</span>!<br />I quickly observed
+      <p className="mx-auto md:mx-36 mx-10 mb-10 my-10 text-center">
+        ...And <span className="font-bold">WOW</span>!<br />I quickly observed
         progress : I was able to recognize the notes and chords played in the
         songs I was listening to 🎉 <br /> I developed these tools to practice
         this method more comfortably, no need to have or to know how to play an
         instrument
+      </p>
+      <p className="mx-auto md:mx-36 mx-10 mb-20 mt-10 text-center">
+        With Love
+        <br />
+        ❤️🎤
       </p>
     </div>
   );
