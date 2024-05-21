@@ -10,11 +10,11 @@ const ScalePracticer = () => {
   };
 
   return (
-    <div className="mx-auto mx-20 px-4 items-center justify-center">
-      <h1 className="mx-auto md:mx-16 mb-5 text-center font-bold">
+    <div className="mx-auto px-4 sm:max-w-lg mx-20 items-center justify-center">
+      <h1 className="mx-auto mb-5 text-center font-bold">
         Major Scale Practicer
       </h1>
-      <p className="mx-auto md:mx-16 mb-10 text-center">
+      <p className="mx-auto mb-10 text-center">
         Practice singing and hearing each tone of the major scale. Start by
         choosing the tonal center you want to practice, you can choose to
         practice with or without the background drone chord

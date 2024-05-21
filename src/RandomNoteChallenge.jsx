@@ -14,11 +14,11 @@ const RandomNoteChallenge = () => {
   };
 
   return (
-    <div className="px-4">
-      <p className="mx-auto md:mx-36 mx-10 mb-5 text-center font-bold">
+    <div className="mx-auto px-4 sm:max-w-lg">
+      <p className="mx-auto mx-10 mb-5 text-center font-bold">
         Now it&apos;s time to challenge your sight singing!
       </p>
-      <p className="mx-auto md:mx-36 mx-10 mb-10 text-center">
+      <p className="mx-auto mx-10 mb-10 text-center">
         Set the speed at which you want the notes (also called
         &quot;degrees&quot;) to be displayed, and try to sing them as quickly as
         they appear!
