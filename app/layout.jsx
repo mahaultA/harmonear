@@ -6,8 +6,8 @@ import { TimerProvider } from "./TimerContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "HARMONIZE ME",
-  description: "EAR TRAINING for singers",
+  title: "HARMONEAR",
+  description: "EAR TRAINING for singers and instrumentists",
 };
 
 export default function RootLayout({ children }) {
