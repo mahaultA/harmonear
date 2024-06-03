@@ -17,7 +17,7 @@ export default function ControlPanel({
   return (
     <div className="mx-auto my-4 gap-1 text-center">
       <label htmlFor="scrollSpeed" className="block text-gray-600 text-sm">
-        Set the scrolling speed (in seconds):
+        Règle la vitesse de défilement (en secondes):
       </label>
       <div className="inline-block">
         <input

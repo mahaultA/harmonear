@@ -12,19 +12,20 @@ const ScalePracticer = () => {
   return (
     <div className="mx-auto px-4 sm:max-w-lg mx-20 items-center justify-center">
       <h1 className="mx-auto mb-5 text-center font-bold">
-        Major Scale Practicer
+        Pratique la gamme majeure
       </h1>
       <p className="mx-auto mb-10 text-center">
-        Practice singing and hearing each tone of the major scale. Start by
-        choosing the tonal center you want to practice, you can choose to
-        practice with or without the background drone chord
+        Choisis la note de départ (centre tonal) : <br />
+        En général E3 pour les hommes et G3 pour les femmes. <br />
+        Lance l&apos;accord de fond. <br />
+        Entraîne toi à chanter chaque numéro.
       </p>
       <div className="mx-auto mb-4 text-center items-center justify-center">
         <label
           htmlFor="tonalCenterSelect"
           className="block font-bold mb-1 text-sm"
         >
-          Choose your tonal center:
+          Choisis ta note de départ
         </label>
         <select
           id="tonalCenterSelect"

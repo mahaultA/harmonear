@@ -7,12 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "HARMONEAR",
-  description: "EAR TRAINING for singers and instrumentists",
+  description: "EAR TRAINING pour chanteurs et instrumentistes",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={inter.className}>
         <TimerProvider>
           <Navbar />

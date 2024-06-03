@@ -57,9 +57,9 @@ const ScalePlayer = ({ startNote }) => {
   return (
     <div className="my-8 text-center">
       <p className="font-bold text-center text-sm">
-        Major Scale Sound Keyboard 🎶
+        Le clavier de la gamme majeure 🎶
       </p>
-      <p className="my-1 text-center text-sm">Starting note: {startNote}</p>
+      <p className="my-1 text-center text-sm">Note de départ: {startNote}</p>
       <div className="flex flex-wrap justify-center gap-1">
         {majorScaleNotes.map((note, index) => (
           <div key={index}>

@@ -27,19 +27,19 @@ const Navbar = ({ children }) => {
           } hover:opacity-80 flex flex-col items-center`}
           href="/"
         >
-          <span>Home</span>
+          <span>Accueil</span>
           <Home size={18} strokeWidth={activeLink === "/" ? 2 : 1}></Home>
         </Link>
         <Link
           className={`link ${
-            activeLink === "/practicer" ? "active font-bold" : ""
+            activeLink === "/pratique" ? "active font-bold" : ""
           } hover:opacity-80 flex flex-col items-center`}
-          href="/practicer"
+          href="/pratique"
         >
-          <span>Practicer</span>
+          <span>Pratique</span>
           <Brain
             size={18}
-            strokeWidth={activeLink === "/practicer" ? 2 : 1}
+            strokeWidth={activeLink === "/pratique" ? 2 : 1}
           ></Brain>
         </Link>
         <Link
@@ -56,12 +56,15 @@ const Navbar = ({ children }) => {
         </Link>
         <Link
           className={`link ${
-            activeLink === "/about" ? "active font-bold" : ""
+            activeLink === "/apropos" ? "active font-bold" : ""
           } hover:opacity-80 flex flex-col items-center`}
-          href="/about"
+          href="/apropos"
         >
-          <span>About</span>
-          <Info size={18} strokeWidth={activeLink === "/about" ? 2 : 1}></Info>
+          <span>À propos</span>
+          <Info
+            size={18}
+            strokeWidth={activeLink === "/apropos" ? 2 : 1}
+          ></Info>
         </Link>
       </nav>
 

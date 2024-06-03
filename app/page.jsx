@@ -37,24 +37,24 @@ export default function Home() {
       <h1 className="text-2xl font-bold my-4">HarmonEar</h1>
       <span className="text-2xl font-bold">🎵</span>
       <p className="my-4">
-        The ear trainer for singers/chorists, and musicians
+        L&apos;ear trainer des choristes, chanteur·se·s et instrumentistes
       </p>
       <Card
-        title="Ear Practicer"
-        description="Practice singing and hearing each tone of the major scale."
+        title="Pratique"
+        description="Imprègne toi de chaque note de la tonalité"
         imageUrl="https://cdn.pixabay.com/photo/2022/08/30/08/04/brain-7420599_1280.png"
-        link="/practicer"
+        link="/pratique"
       />
       <div className="h-1" /> {/* Espacement de 1 pixel */}
       <Card
-        title="Sight singing challenge"
-        description="See how fast you can sight sing the notes displayed ! You can set the speed to display random notes, also called degrees."
+        title="Lecture à vue - Challenge"
+        description="Chante chaque note aussi vite qu'elle s'affiche"
         imageUrl="https://cdn.pixabay.com/photo/2016/03/31/20/28/bird-1295782_960_720.png"
         link="/challenge"
       />
       <p className="mt-10 items-center text-center my-4">
-        Use the provided stopwatch to track your training time ! <br />
-        You can access it via the button :
+        Utilise le timer intégré pour tracker ton temps de pratique <br />
+        Tu peux y accéder via le bouton :
       </p>
       <TimerDialog />
     </main>

@@ -1,6 +1,6 @@
 import React from "react";
-import { droneChords } from "./droneChordsYoutubeLinks"; // Importer l'objet droneChords depuis droneChordsYoutubeLinks.js
-import YoutubePlayer from "./YoutubePlayer"; // Importer le composant YoutubePlayer
+import { droneChords } from "./droneChordsYoutubeLinks";
+import YoutubePlayer from "./YoutubePlayer";
 
 const DroneChordsPlayer = ({ note }) => {
   // Enlever tous les chiffres du nom de la note et stocker la valeur dans "tonalCenter"
@@ -13,9 +13,9 @@ const DroneChordsPlayer = ({ note }) => {
   if (!droneChordLink) {
     return (
       <>
-        <p className="font-bold text-center text-sm">Background Drone Chord</p>
+        <p className="font-bold text-center text-sm">Accord de fond</p>
         <div className="mx-auto flex justify-center">
-          Error: Background chord unavailable
+          Erreur: Accord de fond indisponible
         </div>
       </>
     );
@@ -27,12 +27,12 @@ const DroneChordsPlayer = ({ note }) => {
   // Retourner le composant YoutubePlayer avec videoId dans les props ou le message d'erreur
   return (
     <>
-      <p className="font-bold text-center text-sm">Background Drone Chord</p>
+      <p className="font-bold text-center text-sm">Accord de fond</p>
       <div className="mx-auto flex justify-center">
         {videoId ? (
           <YoutubePlayer videoId={videoId} />
         ) : (
-          <div>Error: Video not found</div>
+          <div>Erreur: Vidéo non trouvée</div>
         )}
       </div>
     </>

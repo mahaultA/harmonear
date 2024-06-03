@@ -31,7 +31,7 @@ const Timer = () => {
 
   return (
     <div className="flex mx-auto items-center text-center my-8 flex-col gap-1">
-      <h2 className="font-bold">Track your practice time</h2>
+      <h2 className="font-bold">Track ton temps de pratique</h2>
       <span className="text-sm">Timer</span>
       <p className="flex mx-auto items-center text-center font-sans">
         {formatTime(elapsedTime)}
