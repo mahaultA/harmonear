@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ControlPanel from "@/src/ControlPanel";
 import NoteDisplay from "@/src/NoteDisplay";
 import useRandomNoteScrolling from "./useRandomNoteScrolling";
@@ -17,7 +17,15 @@ const RandomNoteChallenge = () => {
 
   const currentNote = useRandomNoteScrolling(isPlaying, speed);
 
+  const audioContextRef = useRef(null);
+
   useEffect(() => {
+    // Initialize the AudioContext only once
+    if (!audioContextRef.current) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      audioContextRef.current = new AudioContext();
+    }
+
     // Build major scale notes
     const buildMajorScale = () => {
       let currentNote = startNote;
@@ -36,8 +44,8 @@ const RandomNoteChallenge = () => {
   }, []);
 
   const createAndPlayOscillator = (frequency) => {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
+    const audioContext = audioContextRef.current;
+    if (!audioContext) return;
 
     const oscillator = audioContext.createOscillator();
     oscillator.type = "sine";
