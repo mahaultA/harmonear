@@ -33,33 +33,35 @@ const Navbar = ({ children }) => {
         </button>
         {menuOpen && (
           <div className="fixed left-0 shadow-4xl right-0 top-[3rem] p-5 pt-0 bg-slate-50 border-b border-b-white/20">
-            <Link
-              className={`link ${
-                activeLink === "/pratique" ? "active font-bold" : ""
-              } hover:opacity-80 flex items-center`}
-              href="/pratique"
-              onClick={() => setMenuOpen(false)}
-            >
-              <span>Pratique</span>
-            </Link>
-            <Link
-              className={`link ${
-                activeLink === "/challenge" ? "active font-bold" : ""
-              } hover:opacity-80 flex items-center`}
-              href="/challenge"
-              onClick={() => setMenuOpen(false)}
-            >
-              <span>Challenge</span>
-            </Link>
-            <Link
-              className={`link ${
-                activeLink === "/apropos" ? "active font-bold" : ""
-              } hover:opacity-80 flex items-center`}
-              href="/apropos"
-              onClick={() => setMenuOpen(false)}
-            >
-              <span>À propos</span>
-            </Link>
+            <div className="flex flex-col gap-1">
+              <Link
+                className={`link ${
+                  activeLink === "/pratique" ? "active font-bold" : ""
+                } hover:opacity-80 flex items-center py-2 px-4 border border-slate-500 rounded-md`}
+                href="/pratique"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>Pratique</span>
+              </Link>
+              <Link
+                className={`link ${
+                  activeLink === "/challenge" ? "active font-bold" : ""
+                } hover:opacity-80 flex items-center py-2 px-4 border border-slate-500 rounded-md`}
+                href="/challenge"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>Challenge</span>
+              </Link>
+              <Link
+                className={`link ${
+                  activeLink === "/apropos" ? "active font-bold" : ""
+                } hover:opacity-80 flex items-center py-2 px-4 border border-slate-500 rounded-md`}
+                href="/apropos"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>À propos</span>
+              </Link>
+            </div>
           </div>
         )}
         <div className="hidden sm:flex space-x-4">
