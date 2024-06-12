@@ -19,7 +19,7 @@ const Navbar = ({ children }) => {
 
   return (
     <>
-      <nav className="flex items-center justify-between max-w-5xl mx-auto px-4 py-3 sm:px-6 shadow">
+      <nav className="flex items-center justify-between max-w-5xl mx-auto px-4 py-3 sm:px-6 shadow rounded-xl">
         <Link
           className={`link ${
             activeLink === "/" ? "active font-bold" : ""

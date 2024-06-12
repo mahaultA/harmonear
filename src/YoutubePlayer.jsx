@@ -12,7 +12,7 @@ const YoutubePlayer = ({ videoId }) => {
 
   // Options pour le lecteur YouTube
   const opts = {
-    height: "50",
+    height: "200",
     width: "300",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
