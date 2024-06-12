@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Card = ({ title, description, imageUrl, link }) => (
-  <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-1">
+  <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl mb-1">
     <div className="md:flex">
       <div className="md:shrink-0">
         <img
